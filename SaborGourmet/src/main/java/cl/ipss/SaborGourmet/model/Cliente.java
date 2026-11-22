@@ -1,4 +1,4 @@
-package model;
+package cl.ipss.SaborGourmet.model;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Size;
 
 public class Cliente {
     
-    private int idCliente;
+    private Integer idCliente;
     @NotBlank (message = "Nombre y apellido son obligatorios")
     private String nombre;
     @NotBlank (message = "Numero de telefono es obligatorio")
@@ -19,18 +19,18 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente(int idCliente, String nombre, String telefono, String email) {
+    public Cliente(Integer idCliente, String nombre, String telefono, String email) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.telefono = telefono;
         this.email = email;
     }
 
-    public int getIdCliente() {
+    public Integer getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(int idCliente) {
+    public void setIdCliente(Integer idCliente) {
         this.idCliente = idCliente;
     }
 

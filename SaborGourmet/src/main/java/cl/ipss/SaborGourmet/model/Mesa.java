@@ -1,4 +1,4 @@
-package model;
+package cl.ipss.SaborGourmet.model;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;

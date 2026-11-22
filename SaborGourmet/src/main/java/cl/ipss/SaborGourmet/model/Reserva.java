@@ -1,4 +1,4 @@
-package model;
+package cl.ipss.SaborGourmet.model;
 
 
 import java.time.LocalDate;
