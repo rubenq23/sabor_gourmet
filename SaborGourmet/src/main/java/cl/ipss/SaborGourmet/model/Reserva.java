@@ -9,7 +9,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public class Reserva {
-    private int idReserva;
+    private Integer idReserva;
     @NotNull  (message = "dia de la reserva es obligatorio")
     private LocalDate dia;
     @NotNull (message = "La hora de la reserva es obligatoria")
@@ -21,12 +21,13 @@ public class Reserva {
     private int cantidadComensal;
     @Min (value= 1, message = "El id del cliente es obligatorio")
     private int clienteId;
+    private String estado;
     
     
     public Reserva() {
     }
 
-    public Reserva(int idReserva, LocalDate dia, LocalTime hora, String sector, int numeroMesa, int cantidadComensal,
+    public Reserva(Integer idReserva, LocalDate dia, LocalTime hora, String sector, int numeroMesa, int cantidadComensal,
             int clienteId) {
         this.idReserva = idReserva;
         this.dia = dia;
@@ -38,11 +39,11 @@ public class Reserva {
        
     }
 
-    public int getIdReserva() {
+    public Integer getIdReserva() {
         return idReserva;
     }
 
-    public void setIdReserva(int idReserva) {
+    public void setIdReserva(Integer idReserva) {
         this.idReserva = idReserva;
     }
 
@@ -92,6 +93,14 @@ public class Reserva {
 
     public void setClienteId(int clienteId) {
         this.clienteId = clienteId;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
 }
